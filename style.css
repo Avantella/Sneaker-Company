@@ -173,7 +173,7 @@ li:hover {
 }
 
 h2 {
-    color: hsl(26, 100%, 55%);
+    color:hsl(26, 100%, 55%);
     font-size: 1rem;
 }
 
@@ -252,6 +252,24 @@ h3 {
 
 
 
+/* -------- Footer -------- */
+
+/* footer {
+    background-color: rgb(245, 171, 171);
+    
+} */
+
+.attribution{ 
+    display: flex;
+    justify-content: center;
+    /* background-color: rgb(144, 32, 32); */
+    width: 20rem;
+    margin-left: 55rem;
+}
+
+
+
+
 /* ------------------- MOBILE VIEW:  375px ------------------- */
 
 @media screen and (max-width: 376px) {
@@ -281,8 +299,6 @@ body {
 
 #mobile-logo {
     background-color: red;
-
-
 }
 
 #hamburger-menu:onClick() {
@@ -299,15 +315,6 @@ body {
 }
 
 
-#mobile-menu {
-    /* display: none; */
-}
-
-
-
-
-
-
 
 /* ---------- Main, Images: mobile */
 
@@ -317,28 +324,58 @@ body {
     background-color: rgb(64, 189, 189);
     width: 100vw;
     padding: 0 1rem;
-
+    margin: 0;
 }
 
 
 .all-images {
     margin: auto;
-    padding: 2rem 0 0 0;
-    /* background-color: aquamarine; */
+    padding: 0;
+    background-color: aquamarine;
+    height: 300px;
+    position: relative;
 
 }
+
+
 
 #image1 {
     width: 375px;
     height: 300px;
     object-fit: cover;
-    position: relative;
-
+    position: absolute;
+    z-index: 0;
 }
 
 .slide-btn {
     display: contents;
-    
+
+}
+
+
+#left-btn {
+    z-index: 1;
+    left:  20px;
+    top: 45%;
+    position: absolute;
+    width: 10px;
+    height: 12px;
+    background-color: white;
+    padding: 13px;
+    border-radius: 50%;
+}
+
+#right-btn {
+    z-index: 1;
+    padding: 0;
+    left:  320px;
+    top: 45%;
+    position: absolute;
+    width: 10px;
+    height: 12px;
+    background-color: white;
+    padding: 13px;
+    border-radius: 50%;
 }
 
 .thumbnail {
@@ -351,31 +388,57 @@ body {
     border-radius: 0;
 }
 
-
+/* -------- Main: Text, mobile ----------- */
 
 #product-text {
-    background-color: rgb(193, 193, 193);
-    margin: auto;
-    padding: 0;
+    /* background-color: rgb(193, 193, 193); */
+    margin: 0 auto;
+    padding: 0 1.5rem;
     text-align: left;
+    text-wrap: wrap;
+    width: 300px;
+   
+}
+
+h1 {
+    font-size: 1.5rem;
+    /* background-color: aqua; */
+    text-wrap: wrap;
+    width: 300px;
+}
+
+h2 {
+    font-size: 0.8rem;
+}
+
+p {
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+.purchase {
+    flex-direction: column;
+}
+
+#quantity {
+   justify-content: center;
+
+}
+
+#add-to-cart-btn {
+    height: 3.5rem;
+    width: 19rem;
+    margin: 0.5rem 0;
+}
+
+.price {
+    /* background-color: aqua; */
+    width: 10rem;
 }
 
 
-
-
-/* -------- Footer -------- */
-
-/* footer {
-    background-color: rgb(245, 171, 171);
-    
-} */
-
 .attribution{ 
-    display: flex;
-    justify-content: center;
-    /* background-color: rgb(144, 32, 32); */
-    width: 20rem;
-    margin-left: 55rem;
+    display: none;
 }
 
 }
