@@ -6,25 +6,31 @@ body {
 }
 
 
-li {
+li, a, ul {
     list-style-type: none;
     text-decoration: none;
+    color: hsl(220, 13%, 13%);
 }
 
-li:hover {
+li:hover, ul:hover, a:hover, button:hover {
     cursor: pointer;
 }
 
+#mobile-nav {
+    display: none;
+}
 
 /* ------------------- DESKTOP VIEW:  1440px ------------------ */
 
 
 /* --------- Header ------------ */
-#mobile-header {
+
+
+#hamburger-menu {
     display: none;
 }
 
-#desktop-header {
+#header {
     /* background-color: aqua; */
     display: flex;
     /* border-bottom: solid rgb(222, 222, 222) 1px; */
@@ -33,13 +39,13 @@ li:hover {
    
 }
 
-#desktop-menu {
+#menu {
     display: flex;
     /* background-color: rgb(175, 151, 151); */
     
 }
 
-#desktop-nav {
+#nav {
     display: flex;
     justify-content: space-between;
     /* background-color: rgb(135, 135, 173); */
@@ -50,7 +56,7 @@ li:hover {
 }
 
 
-#desktop-logo { 
+#logo { 
     margin: auto 0;
     /* background-color: blueviolet; */
     padding: 1rem 3rem 0 0 ;
@@ -265,6 +271,8 @@ h3 {
     /* background-color: rgb(144, 32, 32); */
     width: 20rem;
     margin-left: 55rem;
+    white-space: nowrap;
+    gap: 1rem;
 }
 
 
@@ -275,21 +283,105 @@ h3 {
 @media screen and (max-width: 376px) {
 
 
+#header {
+    all: unset;
+   
+}
 
-body { 
-   /* background-color: yellow; */
-} 
 
-#desktop-header {
+#nav { 
+    /* background-color: yellow;  */
+    margin: 0 1rem;
+    padding-right: 0rem;
+}
+
+.menu-items {
     display: none;
 }
 
-/* ---------------- Header, Mobile --------------- */
 
+#logo {
+    /* background-color: blueviolet; */
+    padding: 1rem 0 0 2rem;
+    border: 0;
+    height: 3rem;
+}
+
+.cart-and-avatar {
+    padding-bottom: 0;
+    /* background-color: red; */
+    height: 2rem;
+    border-bottom: 0;
+
+}
+
+#hamburger-menu {
+    display: list-item;
+    width: 100px;
+    height: 30px;
+    /* background-color: orange; */
+    margin: auto;
+    padding: 0.7rem 0 0 1.5rem;
+    background: none;
+    border: none;
+    list-style-type: none;
+}
+
+
+#menu-cart {
+    all: unset;
+}
+
+#avatar-img {
+    width: 35px;
+    margin-left: 0rem;
+}
+
+
+
+/* Mobil-meny som bare vises når hamburgermeny er trykket: */
+
+#mobile-nav {
+   font-weight: 700;
+   font-size: 1.2rem;
+   display: none;
+   flex-direction: column;
+   gap: 1.5rem;
+   margin-top: 0;
+   position: fixed;
+   z-index: 2;
+   padding-left: 2rem;
+   padding-top: 1.5rem;
+   padding-right: 2rem;
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(
+     to right,
+     rgb(255, 255, 255) 0%,
+     rgb(255, 255, 255) 57%,
+     rgb(0, 0, 0, 0.8) 50%,
+     rgb(0, 0, 0, 0.8) 100%
+   );
+}
+
+#close-button {
+    padding-bottom: 3rem;
+    background: none; 
+    border: none;
+    /* background-color: aqua; */
+    width: 3rem;
+    text-align: left;
+
+}
+
+
+
+/* ---------------- Header, Mobile --------------- */
+/* 
 #mobile-header {
     display: flex;
     justify-content: start;
-    /* background-color: yellow; */
+    background-color: yellow;
     gap: 15px;
     padding: 20px 10px 20px 0;
     height: 20px;
@@ -299,20 +391,20 @@ body {
 
 #mobile-logo {
     background-color: red;
-}
+} */
 
-#hamburger-menu:onClick() {
-    
+/* #hamburger-menu:onClick() {
  
-}
+} */
 
+/* 
 #mobile-menu {
     display: contents;
 }
 
 #mobile-menu:onClick() {
     display: contents;
-}
+} */
 
 
 
@@ -397,7 +489,7 @@ body {
     text-align: left;
     text-wrap: wrap;
     width: 300px;
-   
+  
 }
 
 h1 {
@@ -412,7 +504,7 @@ h2 {
 }
 
 p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.7;
 }
 

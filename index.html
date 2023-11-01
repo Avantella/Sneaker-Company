@@ -6,28 +6,24 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+ 
 </head>
 
 <body>
-
  
     <!-- Mobile menu -->
-<header id="mobile-header">
+
+<!-- <header id="mobile-header">
     <nav id="mobile-menu">
-      <div id="menuToggle">
+      <div id="menuToggle"> -->
+
         <!-- <input type="checkbox" /> -->
-        <ul id="hamburger-menu"><img src="images/icon-menu.svg"></ul>
+       
+        <!-- <ul id="hamburger-menu"><img src="images/icon-menu.svg"></ul>
         <ul id="mobile-nav">
           <a href="#">Collections</a>
           <a href="#">Men</a>
@@ -38,17 +34,38 @@
       </div>
     </nav>
   <img src="images/logo.svg" alt="Website logo">
-  </header>
+  </header> -->
       
       
-      <header id="desktop-header">
-      <!-- Desktop menu -->
-        <nav id="desktop-menu">
-            <div id="desktop-logo">
+      <header id="header">  
+
+        <nav id="menu">
+
+      <!------- Mobile nav menu, toggled: ------>
+
+          <ul id="mobile-nav">
+            <button onclick="closeHamburgerMenu()" id="close-button"><img src="images/icon-close.svg" ></button>
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a> 
+          </ul>
+
+          
+      <!-- Nav menu -->
+
+          <button onclick="openHamburgerMenu()" id="hamburger-menu"><img src="images/icon-menu.svg"></button>
+          
+
+
+                         
+            <div id="logo">
               <img src="images/logo.svg" alt="Website logo">        
+              
             </div>
 
-          <li id="desktop-nav">
+          <li id="nav">
             <ul class="menu-items">Collections</ul>
             <ul class="menu-items">Men</ul>
             <ul class="menu-items">Women</ul>
@@ -64,8 +81,8 @@
         </div> -->
         </nav>
         
-
   </header>
+
 <main>
 
 <!-- Image section -->
@@ -131,9 +148,9 @@
 </main>
 
 <footer>
-  <p class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  Coded by <a href="#">Your Name Here</a>.</p>
+  <p class="attribution"> Challenge by: <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by: <a href="#">Your Name Here</a>.</p>
 </footer>
-
+<script defer src="index.js"></script>
 </body>
 </html>
